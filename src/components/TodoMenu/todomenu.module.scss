@@ -1,0 +1,27 @@
+.menu{
+    width: 33%;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            cursor: pointer;
+            font-size: 12px;
+            color: rgb(173, 173, 173);
+            transition: .3s all;
+
+            &:hover{
+                color: #000;
+            }
+
+            &:active{
+                color:#6f78f7;
+            }
+        }
+    }
+    margin-bottom: 10px;
+}
+
+.choose {
+    font-weight: 600;
+    text-decoration: underline;
+}

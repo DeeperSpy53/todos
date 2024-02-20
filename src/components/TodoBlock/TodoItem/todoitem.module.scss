@@ -1,0 +1,78 @@
+$time: .6s; 
+
+.todoItem{
+    display: flex;
+    padding: 10px;
+
+    border-bottom: 1px solid #ececec;
+    transition: $time all;
+    cursor: pointer;
+
+    animation: todoAnim 1s forwards;
+
+    &:hover{
+        background: #f6f6f6;
+    }
+
+    &:active{
+        background: #99aeed;
+    }
+
+    h2{
+        width: 95%;
+        word-break: break-all;
+        margin-left: 10px;
+    }
+}
+
+@keyframes todoAnim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+
+.todoItem.complete{
+    transition: $time all;
+}
+
+.complete{
+    text-decoration:line-through;
+    color:#d6d4d4;
+}
+
+.circle{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    border: 1px solid #d6d4d4;
+
+    transition: $time all;
+
+    img{
+        position: absolute;
+        opacity: 0;
+        width: 9px;
+        height: 11px;
+        animation: circleImg $time forwards;
+    }
+}
+
+@keyframes circleImg{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.8;
+    }
+}
+
+.completeCircle{
+    border: 1px solid #86d091;
+    transition: $time all;
+
+    //background: url("../../../assets/img/check.svg");
+}
