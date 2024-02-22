@@ -3,6 +3,7 @@ import TodoItem from './TodoItem/TodoItem';
 import {useState} from 'react';
 
 export default function TodoBlock(){
+    const [inputStyle, setInputStyle] = useState({})
     const [todoInput, setTodoInput] = useState();
     const [todo, setTodo] = useState([
         {
@@ -12,20 +13,25 @@ export default function TodoBlock(){
         }
     ]);
 
+    console.log(inputStyle);
     function todoKeyDown(e) {
         if(e.key === 'Enter'){
-            if(todoInput.lenght > 0)
+            if(todoInput != undefined && todoInput.length > 0)
             {
                 setTodo((preTodo) => ([
                     ...preTodo,
                     {
-                        id: todo.lenght, complete: false, text: todoInput
+                        id: todo.length, complete: false, text: todoInput
                     }
                 ]))
                 //todo.push({id: 0, complete: false, text: todoInput});
             }
             else{
                 // change input background
+                setInputStyle({background: '#red'});
+                setTimeout(() => {
+                    
+                }, 1.0);
             }
         }
     }

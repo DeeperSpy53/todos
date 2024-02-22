@@ -1,6 +1,19 @@
 .todoBlock{
     margin-top: 10px;
     text-align: center;
+
+    input{
+        text-align: center;
+
+        &:focus::placeholder{
+            color: #fff;
+            transition: .3s all;
+        }
+        
+        &::placeholder{
+            transition: .3s all;
+        }
+    }
 }
 
 .todoList{
