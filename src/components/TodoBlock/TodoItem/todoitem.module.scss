@@ -45,7 +45,7 @@ $time: .6s;
 
 .circle{
     position: relative;
-    width: 15px;
+    width: 17px;
     height: 15px;
     border-radius: 25px;
     border: 1px solid #d6d4d4;
@@ -53,7 +53,7 @@ $time: .6s;
     transition: $time all;
 
     img{
-        position: absolute;
+        text-align: center;
         opacity: 0;
         width: 9px;
         height: 11px;

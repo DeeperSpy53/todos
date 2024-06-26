@@ -1,9 +1,10 @@
 import style from './todomenu.module.scss'
-import {useState} from 'react';
+import {useContext, useState} from 'react';
+import ListContext from '../../ListContext'
 
 export default function TodoMenu(){
-    const [list, setList] = useState(0);
-    console.log(list);
+    //const [list, setList] = useState(0);
+    const {list, setList} = useContext(ListContext);
 
     return(
         <div className={style.menu}>
